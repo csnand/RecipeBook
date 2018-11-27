@@ -15,7 +15,7 @@ public class RecipeContentProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
 
-        this.dbHelper = new DBHelper(this.getContext(), "recipeContentProvicer", null, 1);
+        this.dbHelper = new DBHelper(this.getContext(), "recipeContentProvider", null, 1);
         return true;
     }
 
