@@ -32,8 +32,7 @@
             android:id="@+id/radioTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="title"
-            android:focusedByDefault="true"/>
+            android:text="title" />
 
         <RadioButton
             android:id="@+id/radioRating"
@@ -50,7 +49,53 @@
         android:layout_marginEnd="16dp"
         android:text="Add New Recipe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onClickAddNewRecipe"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="538dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddNewecipeButton"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_weight="1"
+                android:text="ID"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_weight="3"
+                android:text="TITLE"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_weight="1"
+                android:text="RATING"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/MainListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </LinearLayout>
+
 
 
 </android.support.constraint.ConstraintLayout>
